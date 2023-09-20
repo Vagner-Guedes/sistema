@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Poppins:wght@300&family=Sigmar&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+
+/* Inicio da tela de login*/
+
+.login-visible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid black;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+   
+    color: black;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: black;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.forget label input{
+    margin-right: 3px;
+}
+.forget label a{
+    color: black;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+.login-bt{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: slategray;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+/* FIm da tela de login*/
+
+/* Estilo base do navbar (telas maiores) */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha ao topo */
+    background-color: slategray; /* Cor de fundo (ajuste conforme necessário) */
+    padding: 60px 0; /* Espaçamento interno superior e inferior */
+}
+
+/* Estilo base do título <h1> no navbar (canto esquerdo) */
+.navbar h1 {
+    margin: 0; /* Remover margem padrão do <h1> */
+    position: absolute; /* Posição absoluta para ajustar à posição desejada */
+    left: 0; /* Alinhar a esquerda do elemento com a esquerda da página */
+    color: #fff; /* Cor do texto (ajuste conforme necessário) */
+    margin-left: 60px; /* Adicionar um pequeno espaçamento à esquerda (ajuste conforme necessário) */
+}
+
+/* Estilo base do container do navbar (centralizado) */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centralizar os itens horizontalmente */
+    align-items: center; /* Centralizar os itens verticalmente */
+    height: 100%; /* Define a altura do container como 100% para centralizar verticalmente */
+}
+
+/* Estilo base dos itens da lista */
+.navbar li {
+    margin: 0 50px; /* Espaçamento horizontal entre os itens (ajuste conforme necessário) */
+}
+
+/* Estilo base dos links */
+.navbar a {
+    text-decoration: none;
+    color: #fff; /* Cor dos links (ajuste conforme necessário) */
+}
+
+/* Estilo base do botão de sair */
+.navbar button {
+    border: none;
+    background: none;
+    color: #fff; /* Cor do texto do botão (ajuste conforme necessário) */
+    cursor: pointer;
+    font-size: 16px; /* Tamanho da fonte (ajuste conforme necessário) */
+}
+
+/* Efeito de hover para os itens da lista */
+.navbar li:hover a {
+    color: #ff0000; /* Cor vermelha ao passar o mouse (ajuste conforme necessário) */
+}
+
+/* Efeito de hover para o botão de sair */
+.navbar button:hover {
+    color: #ff0000; /* Cor vermelha ao passar o mouse (ajuste conforme necessário) */
+}
+
+/* Media query para ajustar o layout em telas menores */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Empilhar itens verticalmente em telas menores */
+        align-items: center; /* Centralizar itens verticalmente */
+        padding: 30px 0; /* Reduzir espaçamento interno em telas menores */
+    }
+
+    /* Ajustar o estilo do <h1> para telas menores */
+    .navbar h1 {
+        position: static; /* Remover posição absoluta */
+        margin: 0 0 20px 0; /* Espaçamento inferior para separar do resto do conteúdo */
+    }
+
+    /* Ajustar o estilo do container do navbar para telas menores */
+    .navbar ul {
+        flex-direction: column; /* Empilhar itens verticalmente */
+        align-items: center; /* Centralizar itens verticalmente */
+    }
+
+    /* Ajustar o estilo dos itens da lista para telas menores */
+    .navbar li {
+        margin: 10px 0; /* Espaçamento vertical entre os itens */
+    }
+}
+
+/* modal*/
+
+
+/* Estilos gerais para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    z-index: 1;
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilos para o botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para o título do modal */
+.modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para o formulário dentro do modal */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para as etiquetas do formulário */
+label {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilos para os campos de entrada de texto e textarea */
+input[type="text"],
+textarea,
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Estilos para o botão de envio */
+.submitBtn {
+    background-color: #007bff; /* Cor do botão (ajuste conforme necessário) */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilos para o botão de envio quando hover */
+.submitBtn:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse (ajuste conforme necessário) */
+}
+
+
+
+
+
+/*cadastro*/
+/* Estilos para telas maiores (por exemplo, desktops) */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.selecao-bloco, .selecao-sala, .informacoes-sala {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label, select {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#reservar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+#reservar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para telas menores (por exemplo, smartphones) */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    label, select {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+}

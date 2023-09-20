@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="login-section" class="login-visible">
+        <div class="form-box">
+            <div class="form-value">
+                <form id="login-form">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" id="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="senha" required>
+                        <label for="">Senha</label>
+                    </div>
+                    <button class="login-bt" type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-section-aluno" style="display: none;">
+       
+    <nav id="navbar" class="navbar">
+      <h1>Olá Aluno</h1>
+      <ul>
+        <li><button id="exibirContainer">Cadastro</button></li>
+        <li><button id="openModalBtn" >Solicitar Sala</button></li>
+        <li><button id="sair-aluno">Sair</button></li>
+      </ul>
+    </nav>        
+ <div class="container" style="display: none;">
+        <h1>Reserva de Salas</h1>
+        <div class="selecao-bloco">
+            <h2>Selecione o Bloco:</h2>
+            <button id="blocoA">Bloco A</button>
+            <button id="blocoB">Bloco B</button>
+        </div>
+        <div class="selecao-sala" style="display: none;">
+            <h2>Selecione a Sala e o Andar:</h2>
+            <label for="sala">Sala:</label>
+            <select id="sala"></select>
+            <label for="andar">Andar:</label>
+            <select id="andar"></select>
+            <button id="reservar">Reservar Sala</button>
+        </div>
+        <div class="informacoes-sala" style="display: none;">
+            <h2>Informações da Sala:</h2>
+            <p id="detalhesSala">Detalhes da sala selecionada aparecerão aqui.</p>
+            <button id="fecharFormulario">Fechar</button>
+        </div>
+    </div>
+   
+    
+
+    <div id="myModal" class="modal"  >
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2 class="modal-title">Solicitação de Sala</h2>
+            <form>
+                <label for="solicitante">Solicitante:</label>
+                <input type="text" id="solicitante" name="solicitante" required>
+                
+                <label for="responsavel">Responsável:</label>
+                <input type="text" id="responsavel" name="responsavel" required>
+                
+                <label for="motivo">Motivo da Solicitação:</label>
+                <textarea id="motivo" name="motivo" required></textarea>
+                
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <button type="button" id="submitBtn" class="submitBtn">Submit</button>
+            </form>
+        </div>
+
+       
+
+    </section>
+
+    <section id="main-section-prof" style="display: none;">
+
+        <nav id="navbar" class="navbar">
+        <h1>Olá Professor</h1>
+        <ul>
+            <li><a href="">Cadastro</a></li>
+            <li><button id="openModalBtn1" >Solicitar Sala</button></li>
+            <li><button id="sair-prof">Sair</button></li>
+          </ul>
+        </nav>        
+    
+      
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
